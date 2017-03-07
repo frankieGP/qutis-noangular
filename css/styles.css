@@ -1,0 +1,172 @@
+body {
+  /*background-color: black;
+  color: white;*/
+  /*margin: 0;*/
+}
+
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(250, 250, 250);
+}
+button {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-family: monospace;
+    line-height: 20px;
+}
+input {
+    display: inline-block;
+    float: right;
+    width: 45%;
+}
+span {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    background-color: white;
+}
+hr {
+    border-color: rgba(200, 200, 200, 0.1);
+}
+#content {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+#oscilloscope {
+    margin-bottom: 20px;
+}
+#controller {
+    overflow: hidden;
+}
+#controller svg {
+    position: relative;
+    top: -55px;
+}
+@media (min-width: 640px) {
+    #controller svg {
+        top: -125px;
+    }
+}
+.key {
+    cursor: pointer;
+}
+.key:hover, .key.active {
+    fill: #00ADEE;
+}
+
+.wrap {
+  text-align: center;
+}
+.question {
+  font-family: "Avenir";
+}
+
+.answer {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+
+#title {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 150pt;
+  color: black;
+}
+#whatqutis-A, #whatneeded-Q {
+  font-size: 50pt;
+}
+#whatneeded-A, #whatmidi-Q, #whatmidi-A {
+  font-size: 45pt;
+}
+#altexplain-A, #keys-Q, #keys-A {
+  font-size: 25pt;
+}
+#knobs, #xy, #pads {
+  font-size: 20pt;
+}
+
+#whatqutis-Q {
+  font-size: 100pt;
+}
+#whatqutis-A {
+}
+
+#whatneeded-Q {
+}
+#whatneeded-A {
+
+}
+
+
+#whatmidi-Q {
+}
+#whatmidi-A {
+}
+#whatmidi-A p:nth-child(3) {
+  font-size: 30pt;
+}
+
+
+#whatmidido-Q {
+  font-size: 40pt;
+}
+
+#whatmidido-A {
+  font-size: 30pt;
+}
+
+
+#altexplain-Q {
+  font-size: 30pt;
+}
+
+#altexplain-A {
+}
+#keys-Q {
+}
+#keys-A {
+}
+
+.features {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row /* works with row or column */
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: flex-start;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.features p {
+  font-size: 15pt;
+}
+.features h1 {
+  font-size: 20pt;
+}
+.features .answers {
+
+}
+#xy {
+  padding-left: 30px;
+  padding-right: 30px;
+}
