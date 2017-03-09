@@ -34,14 +34,20 @@ $( ".drum" )
     $( this ).css("background-color","white" );
   });
 
-  $( ".key" )
+  $( ".keyT" )
   .mouseup(function() {
-    $( this ).css("background-color","#CDD4D9");
+    $( this ).css("background-color","#BFC5C5");
   })
   .mousedown(function() {
-    $( this ).css("background-color","#404040" );
+    $( this ).css("background-color","white" );
   });
-
+  $( ".keyB" )
+  .mouseup(function() {
+    $( this ).css("background-color","#404040");
+  })
+  .mousedown(function() {
+    $( this ).css("background-color","white" );
+  });
 
 // // set up our Audio Context
 // var audioContext = new(window.AudioContext || window.webkitAudioContext);
