@@ -14,18 +14,18 @@
 // start the oscillator that will produce audio
 
 // start the oscillator that will modify the gain value
-$(function($) {
-
-     $(".dial").knob({
-         change : function (value) {
-             //console.log("change : " + value);
-         },
-         release : function (value) {
-             //console.log(this.$.attr('value'));
-             console.log("release : " + value);
-         },
-       })
-     });
+// $(function($) {
+//
+//      $(".dial").knob({
+//          change : function (value) {
+//              //console.log("change : " + value);
+//          },
+//          release : function (value) {
+//              //console.log(this.$.attr('value'));
+//              console.log("release : " + value);
+//          },
+//        })
+//      });
 $( ".drum" )
   .mouseup(function() {
     $( this ).css("background-color","#CDD4D9");
