@@ -14,31 +14,33 @@
 // start the oscillator that will produce audio
 
 // start the oscillator that will modify the gain value
-$('.dial').trigger(
-        'configure',
-        {
-            "min":10,
-            "max":40,
-            "fgColor":"#FF0000",
-            "skin":"tron",
-            "cursor":true
-        }
-    );
-$( "#drum1" )
+$(function($) {
+
+     $(".dial").knob({
+         change : function (value) {
+             //console.log("change : " + value);
+         },
+         release : function (value) {
+             //console.log(this.$.attr('value'));
+             console.log("release : " + value);
+         },
+       })
+     });
+$( ".drum" )
   .mouseup(function() {
-    $( this ).append( "<span style='background-color:#f00;'>Mouse up.</span>" );
+    $( this ).css("background-color","#CDD4D9");
   })
   .mousedown(function() {
-    $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
+    $( this ).css("background-color","white" );
   });
 
   $( ".key" )
-    .mouseup(function() {
-      $( this ).append( "<span style='background-color:#f00;'>Mouse up.</span>" );
-    })
-    .mousedown(function() {
-      $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
-    });
+  .mouseup(function() {
+    $( this ).css("background-color","#CDD4D9");
+  })
+  .mousedown(function() {
+    $( this ).css("background-color","#404040" );
+  });
 
 
 // // set up our Audio Context
