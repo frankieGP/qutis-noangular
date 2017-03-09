@@ -1,0 +1,191 @@
+body {
+  background-color: black;
+}
+.synth-wrap{
+  height: 720px;
+  width:1280px;
+  background: #2D2F2E;
+  color: white;
+  margin: auto;
+}
+
+.synth-top, .synth-bottom{
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+
+}
+.knobs-top {
+  display: flex;
+  padding-bottom: 30px;
+
+}
+.knobs-bottom {
+  display: flex;
+
+}
+.knob-label{
+}
+.knob {
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background-color: black;
+  margin: 20px;
+  transform: rotate(45deg);
+
+}
+#knob1, #knob2, #knob3, #knob4, #knob5, #knob6, #knob7, #knob8 {
+  height: 44px;
+  width: 44px;
+  border-radius: 50px;
+  background-color: #4a4a4a;
+  position: relative;
+  left: 8px;
+  top: 8px;
+
+}
+#tail1, #tail2, #tail3, #tail4, #tail5, #tail6, #tail7, #tail8 {
+  background-color: white;
+  height: 22px;
+  width: 8px;
+  border-radius: 50px;
+  position: relative;
+  left: 26px;
+  top: -14px;
+
+}
+
+.xy {
+  height: 250px;
+  min-width: 360px;
+  background-color: #4a4a4a;
+  border-radius: 20px;
+  border: 10px solid black;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+.drums-top, .drums-bottom{
+  display: flex;
+}
+#drum1, #drum2, #drum3, #drum4, #drum5, #drum6, #drum7, #drum8 {
+  height:75px;
+  width: 75px;
+  background-color: #CDD4D9;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.volume {
+  position: relative;
+  top: 100px;
+  left: 10px;
+}
+.out {
+  width: 100px;
+  height: 250px;
+  border: 5px solid white;
+  border-radius: 1px;
+}
+
+.in {
+  width: 50px;
+  height: 200px;
+  border-radius: 2px;
+  border: 2px solid white;
+  background-color: #404040;
+  position: relative;
+  top: -215px;
+  left: 25px;
+}
+
+.keyboard{
+  position: relative;
+  top: 100px;
+  left: 60px;
+  display: flex;
+}
+
+.keys-top {
+  position: relative;
+  left: 20px;
+}
+.keys-top, .keys-bottom  {
+  display: flex;
+}
+.CDsharp{
+  display: flex;
+  position: relative;
+  left: 15px;
+
+
+}
+.FGAsharp{
+  display: flex;
+  position: relative;
+  left: 66px;
+}
+#Cs1, #Ds1,
+#Fs1,
+#Gs1,
+#As1,
+#Cs2,
+#Ds2,
+#Fs2,
+#Gs2,
+#As2
+ {
+  height: 100px;
+  width: 50px;
+  background-color: #BFC5C5;
+  border-radius: 7px;
+  margin: 6px;
+}
+#C1,
+#D1,
+#E1,
+#F1,
+#G1,
+#A1,
+#B1,
+#C2,
+#D2,
+#E2,
+#F2,
+#G2,
+#A2,
+#B2,
+#C3
+ {
+  height: 100px;
+  width: 50px;
+  background-color: #404040;
+  border-radius: 7px;
+  margin: 6px;
+}
+.key {
+    background-color: pink;
+}
+.dropdowns {
+  position: relative;
+  left: 80px;
+  top: 150px;
+}
+.presets, .MIDI, .octave {
+  border: 5px solid white;
+  height: 50px;
+  width: 125px;
+  text-align: center;
+  margin-top: 15px;
+}
+#volume {
+  transform: rotate(-90deg);
+  position: relative;
+  top: 70px;
+  left: -40px;
+}

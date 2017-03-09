@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
 
 
-    <title>web midi</title>
+    <!-- <title>web midi</title>
   </head>
   <body>
 
     <div id="content">
-        <canvas id="oscilloscope"></canvas>
+      <canvas id="canvas"></canvas>
         <div id="controls">
             <label for='waveType'>VCO type
                 <select name="waveType" class="wavetype">
@@ -22,23 +22,121 @@
                     <option value="triangle">triangle</option>
                 </select>
             </label>
-            <br />
-            <label for='portamento'>Portamento
-                <input type='checkbox' class='portamento' name='portamento' checked />
+            <label for='tremolo'>LFO
+            <input type='checkbox' class='tremolo' name='tremolo' checked />
+        </label>
+        <br>
+            <hr>
+            <p>Envelope Generator (EG)</p>
+            <br>
+            <label for='egAttack'>Attack (time) <span class='ega-display'>0.1</span>
+                <input class='eg-attack' type='range' min='0' max='1' step='0.05' value='0.1' name='egAttack' />
             </label>
             <br>
-            <label for='masterGain'>master gain <span class='master-gain-display'>1</span>
+            <label for='egDecay'>Decay (time) <span class='egd-display'>0.1</span>
+                <input class='eg-decay' type='range' min='0' max='1' step='0.05' value='0.1' name='egDecay' />
+            </label>
+            <br>
+            <label for='egSustain'>Sustain (time) <span class='egs-display'>0.1</span>
+                <input class='eg-sustain' type='range' min='0' max='1' step='0.05' value='0.1' name='egSustain' />
+            </label>
+            <br>
+            <label for='egRelease'>Release (time) <span class='egr-display'>0.1</span>
+                <input class='eg-release' type='range' min='0' max='1' step='0.05' value='0.1' name='egRelease' />
+            </label>
+            <br>
+            <p>EG Mode</p>
+            <label for='egHigh'>High
+              <input class='eg-high' type='radio' name='egMode' value='10' />
+            </label>
+            <label for='egMedium'>Medium
+              <input class='eg-medium' type='radio' name='egMode' value='5' />
+            </label>
+            <label for='egLow'>Low
+              <input class='eg-low' type='radio' name='egMode' value='1' checked/>
+            </label>
+            <br>
+            <!-- <label for='portamento'>Portamento
+                <input type='checkbox' class='portamento' name='portamento' checked />
+            </label>
+            <br> -->
+            <!-- <label for='masterGain'>master gain <span class='master-gain-display'>1</span>
 
                 <input class='master-gain' type='range' min='0' max='1' step='0.1' value='1' />
             </label>
             <hr>
         </div>
         <div id="controller">
-            <
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 296 203" enable-background="new 0 0 296 203" xml:space="preserve">
+                <g id="kboard">
+                    <g>
+                        <path fill="#F1F1F2" d="M277.2,135.9H18.8c-1.1,0-2-0.9-2-2V69.1c0-1.1,0.9-2,2-2h258.5c1.1,0,2,0.9,2,2v64.8
+    			C279.2,135,278.4,135.9,277.2,135.9z" />
+                        <path class='key c0 key48' fill="#282828" d="M68.8,128.9H57.3c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C69.3,128.7,69.1,128.9,68.8,128.9z" />
+                        <path class='key sharp c-0 key49' fill="#282828" d="M75.1,99.6H63.6c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C75.7,99.3,75.4,99.6,75.1,99.6z" />
+                        <path class='key d0 key50' fill="#282828" d="M83.3,128.9H71.8c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C83.9,128.7,83.6,128.9,83.3,128.9z" />
+                        <path class='key sharp d-0 key51' fill="#282828" d="M89.7,99.6H78.2c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C90.3,99.3,90,99.6,89.7,99.6z" />
+                        <path class='key e0 key52' fill="#282828" d="M97.8,128.9H86.3c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C98.4,128.7,98.1,128.9,97.8,128.9z" />
+                        <path class='key f0 key53' fill="#282828" d="M112.3,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C112.9,128.7,112.7,128.9,112.3,128.9z" />
+                        <path class='key sharp f-0 key54' fill="#282828" d="M118.8,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C119.4,99.3,119.1,99.6,118.8,99.6z" />
+                        <path class='key g0 key55' fill="#282828" d="M126.9,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C127.4,128.7,127.2,128.9,126.9,128.9z" />
+                        <path class='key sharp g-0 key56' fill="#282828" d="M133.4,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C134,99.3,133.7,99.6,133.4,99.6z" />
+                        <path class='key a0 key57' fill="#282828" d="M141.4,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C142,128.7,141.7,128.9,141.4,128.9z" />
+                        <path class='key sharp a-0 key58' fill="#282828" d="M148.1,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C148.7,99.3,148.4,99.6,148.1,99.6z" />
+                        <path class='key b0 key59' fill="#282828" d="M155.9,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C156.5,128.7,156.2,128.9,155.9,128.9z" />
+                        <path class='key c1 key60' fill="#282828" d="M170.4,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C171,128.7,170.7,128.9,170.4,128.9z" />
+                        <path class='key sharp c-1 key61' fill="#282828" d="M177.3,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C177.8,99.3,177.6,99.6,177.3,99.6z" />
+                        <path class='key d1 key62' fill="#282828" d="M184.9,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C185.5,128.7,185.3,128.9,184.9,128.9z" />
+                        <path class='key sharp d-1 key63' fill="#282828" d="M191.9,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C192.4,99.3,192.2,99.6,191.9,99.6z" />
+                        <path class='key e1 key64' fill="#282828" d="M199.5,128.9H188c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C200,128.7,199.8,128.9,199.5,128.9z" />
+                        <path class='key f1 key65' fill="#282828" d="M214,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6H214c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C214.6,128.7,214.3,128.9,214,128.9z" />
+                        <path class='key sharp f-1 key66' fill="#282828" d="M220.7,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C221.3,99.3,221.1,99.6,220.7,99.6z" />
+                        <path class='key g1 key67' fill="#282828" d="M228.5,128.9H217c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C229.1,128.7,228.8,128.9,228.5,128.9z" />
+                        <path class='key sharp g-1 key68' fill="#282828" d="M235.3,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6V99
+    			C235.9,99.3,235.6,99.6,235.3,99.6z" />
+                        <path class='key a1 key69' fill="#282828" d="M243,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6H243c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C243.6,128.7,243.3,128.9,243,128.9z" />
+                        <path class='key sharp a-1 key70' fill="#282828" d="M250,99.6h-11.5c-0.3,0-0.6-0.3-0.6-0.6V74.4c0-0.3,0.3-0.6,0.6-0.6H250c0.3,0,0.6,0.3,0.6,0.6V99
+    			C250.6,99.3,250.3,99.6,250,99.6z" />
+                        <path class='key b1 key71' fill="#282828" d="M257.6,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C258.1,128.7,257.9,128.9,257.6,128.9z" />
+                        <path class='key c3 key72' fill="#282828" d="M272.1,128.9h-11.5c-0.3,0-0.6-0.3-0.6-0.6v-24.6c0-0.3,0.3-0.6,0.6-0.6h11.5c0.3,0,0.6,0.3,0.6,0.6v24.6
+    			C272.7,128.7,272.4,128.9,272.1,128.9z" />
+
+
+                    </g>
+                </g>
             </svg>
+            <div class='key c3 key72'>
+            </div>
         </div>
     </div>
-
+    <div id="keybox" touch-action="none">
+        <div id="blackkeys">
+            <span id="k61" class="black key"></span><span id="k63" class="black key"></span><span class="spacer"></span><span id="k66" class="black key"></span><span id="k68" class="black key"></span><span id="k70" class="black key"></span><span class="spacer"></span><span id="k73" class="black key"></span><span id="k75" class="black key"></span><span class="spacer"></span><span id="k78" class="black key"></span><span id="k80" class="black key"></span><span id="k82" class="black key"></span>
+        </div>
+        <span id="k60" class="white key"></span><span id="k62" class="white key"></span><span id="k64" class="white key"></span><span id="k65" class="white key"></span><span id="k67" class="white key"></span><span id="k69" class="white key"></span><span id="k71" class="white key"></span><span id="k72" class="white key"></span><span id="k74" class="white key"></span><span id="k76" class="white key"></span><span id="k77" class="white key"></span><span id="k79" class="white key"></span><span id="k81" class="white key"></span><span id="k83" class="white key"></span>
+    </div> -->
 
     <!-- <div id="title">QUTIS</div>
     <div class="synth">
@@ -78,7 +176,7 @@
 
 
 
-    <!-- <div class="wrap">
+    <div class="wrap">
 
       <div class="QA">
         <div class="question" id="whatqutis-Q">
@@ -170,16 +268,17 @@
           <p>Okay, but what's a sound module?</p>
         </div>
         <div <div class="answer" id="soundmodule-A">
-          <p>Let's take a <a href="">LOOK</a>
+          <p>Let's take a <a href="soundmodule.html">LOOK</a>
         </div>
       </div>
-    </div> -->
+    </div>
 
 
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="scripts.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="node_modules/webmidi/webmidi.min.js"></script>
+
+    <link rel="stylesheet" href="css/soundmodule.css" media="screen" title="no title" charset="utf-8">
+
+<div class="synth-wrap">
+<div class="synth-top">
+  <div class="allknobs">
+  <div class="knobs-top">
+
+    <div class="knob">
+
+
+      <div id="knob1">
+      </div>
+      <div id="tail1">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RELEASE
+        </p>
+      </div> -->
+
+      <div id="knob2">
+      </div>
+      <div id="tail2">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          CUTOFF
+        </p>
+      </div> -->
+
+        <div id="knob3">
+      </div>
+      <div id="tail3">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RES
+        </p>
+      </div> -->
+
+        <div id="knob4">
+      </div>
+      <div id="tail4">
+      </div>
+      </div>
+  </div>
+
+  <div class="knobs-bottom">
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RELEASE
+        </p>
+      </div> -->
+
+        <div id="knob5">
+      </div>
+      <div id="tail5">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RELEASE
+        </p>
+      </div> -->
+
+        <div id="knob6">
+      </div>
+      <div id="tail6">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RELEASE
+        </p>
+      </div> -->
+
+        <div id="knob7">
+      </div>
+      <div id="tail7">
+      </div>
+    </div>
+
+    <div class="knob">
+      <!-- <div class="knob-label">
+        <p>
+          RELEASE
+        </p>
+      </div> -->
+
+        <div id="knob8">
+      </div>
+      <div id="tail8">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="xy">
+</div>
+
+<div class="drums">
+  <div class="drums-top">
+    <div id="drum1">
+    </div>
+    <div id="drum2">
+    </div>
+    <div id="drum3">
+    </div>
+    <div id="drum4">
+    </div>
+  </div>
+  <div class="drums-bottom">
+    <div id="drum5">
+    </div>
+    <div id="drum6">
+    </div>
+    <div id="drum7">
+    </div>
+    <div id="drum8">
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="synth-bottom">
+
+<div class="volume">
+  <div class="out">
+  </div>
+  <div class="in">
+    <label for="fader">Volume</label>
+    <input type="range" min="0" max="10" value="3" id="volume">
+  </div>
+
+</div>
+
+<div class="keyboard">
+  <div class = "octave1">
+    <div class="keys-top">
+      <div class="CDsharp">
+        <div class="key" id="Cs1">
+        </div>
+        <div class="key" id="Ds1">
+        </div>
+      </div>
+      <div class="FGAsharp">
+
+        <div class="key" id="Fs1">
+        </div>
+        <div class="key" id="Gs1">
+        </div>
+        <div class="key" id="As1">
+        </div>
+      </div>
+
+    </div>
+    <div class="keys-bottom">
+      <div class="key" id="C1">
+      </div>
+      <div class="key" id="D1">
+      </div>
+      <div class="key" id="E1">
+      </div>
+      <div class="key" id="F1">
+      </div>
+      <div class="key" id="G1">
+      </div>
+      <div class="key" id="A1">
+      </div>
+      <div class="key" id="B1">
+      </div>
+    </div>
+  </div>
+  <div class = "octave2">
+    <div class="keys-top">
+      <div class="CDsharp">
+        <div class="key" id="Cs2">
+        </div>
+        <div class="key" id="Ds2">
+        </div>
+      </div>
+    <div class="FGAsharp">
+
+      <div class="key" id="Fs2">
+      </div>
+      <div class="key" id="Gs2">
+      </div>
+      <div class="key" id="As2">
+      </div>
+    </div>
+    </div>
+    <div class="keys-bottom">
+      <div class="key" id="C2">
+      </div>
+      <div class="key" id="D2">
+      </div>
+      <div class="key" id="E2">
+      </div>
+      <div class="key" id="F2">
+      </div>
+      <div class="key" id="G2">
+      </div>
+      <div class="key" id="A2">
+      </div>
+      <div class="key" id="B2">
+      </div>
+      <div class="key" id="C3">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="dropdowns">
+  <div class="presets">
+    <p>Presets</p>
+
+  </div>
+  <div class="MIDI">
+    <p>MIDI</p>
+  </div>
+  <div class="octave">
+    <p>Octave</p>
+  </div>
+</div> -->
+
+</div>
+<input type="text" class="dial" data-min="-50" data-max="50">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
+</html>
